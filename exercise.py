@@ -125,7 +125,7 @@
 #! Exercise 4: Weather Advice
 #
 # Write a Python script named `weather_advice` that provides clothing advice based on weather conditions.
-#
+
 # Requirements:
 # - The script should prompt the user to enter if it is cold (yes/no).
 # - Then, ask if it is raining (yes/no).
@@ -134,7 +134,7 @@
 #   - If it is cold BUT NOT raining, print "Wear a warm coat."
 #   - If it is NOT cold but raining, print "Carry an umbrella."
 #   - If it is NOT cold AND NOT raining, print "Wear light clothing."
-#
+
 # Hints:
 # - Use logical operators (`AND`, `OR`, `NOT`) in your if statements to handle multiple conditions.
 
@@ -179,9 +179,39 @@
 # - Ensure to validate input formats and handle unexpected inputs gracefully.
 
 # def determine_season():
-    # Your control flow logic goes here
 
-# Call the function
+#     months = {
+#         "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
+#         "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12
+#     }
+    
+#     month = input("Enter the month of the year (Jan - Dec): ")
+#     day = input("Enter the day of the month: ")
+    
+#     if month not in months:
+#         print("Invalid month. Please enter a valid month abbreviation (e.g., Jan, Feb, etc.).")
+       
+#     day = int(day)
+#     if day < 1 or day > 31:
+#         print("Invalid day. Please enter a valid day of the month (1-31).")
+          
+#     month_num = months[month]
+
+#     if (month_num == 12 and day >= 21) or month_num in (1, 2) or (month_num == 3 and day <= 19):
+#         season = "Winter"
+#     elif (month_num == 3 and day >= 20) or month_num in (4, 5) or (month_num == 6 and day <= 20):
+#         season = "Spring"
+#     elif (month_num == 6 and day >= 21) or month_num in (7, 8) or (month_num == 9 and day <= 21):
+#         season = "Summer"
+#     elif (month_num == 9 and day >= 22) or month_num in (10, 11) or (month_num == 12 and day <= 20):
+#         season = "Fall"
+#     else:
+#         print("Invalid date. Please check the entered values.")
+#         return
+
+#     print(f"{month} {day} is in {season}.")
+
+# # Call the function
 # determine_season()
 
 
@@ -204,40 +234,27 @@
 # - Use a for loop with a range to limit guesses to five.
 # - Use logical AND, OR, and NOT to check conditions and provide appropriate feedback.
 
-def guess_number():
-    # Fixed target number for guessing
-    target_number = 42
+# def guess_number():
+#     # Fixed target number for guessing
+#     target_number = 42
     
-    # Maximum number of attempts allowed
-    max_attempts = 5
+#     # Maximum number of attempts allowed
+#     max_attempts = 5
     
-    print("Welcome to the Number Guessing Game!")
-    print("You have 5 attempts to guess the number between 1 and 100.")
+#     print("Welcome to the Number Guessing Game!")
+#     print("You have 5 attempts to guess the number between 1 and 100.")
     
-    # Loop to allow up to 5 guesses
-    for attempt in range(1, max_attempts + 1):
-        
-        # Prompt the user to guess the number
-        guess = int(input(f"Attempt {attempt}: Enter your guess: "))
+#     for attempt in range(1, max_attempts + 1):
+#         guess = int(input(f"Attempt {attempt}: Enter your guess: ")) 
+#         if guess == target_number:
+#             print("Congratulations, you guessed correctly!")
+#         if guess < target_number:
+#             print("Guess is too low.")
+#         elif guess > target_number:
+#             print("Guess is too high.")
             
-        # Check if the guess is correct
-        if guess == target_number:
-            print("Congratulations, you guessed correctly!")
-            
-            
-            # Provide hints based on the guess
-        if guess < target_number:
-            print("Guess is too low.")
-        elif guess > target_number:
-            print("Guess is too high.")
-            
-            # Inform the user if it's their last chance
-        if attempt == max_attempts - 1:
-            print("Last chance!")
-                
-    
-    # If the user fails to guess the number in five attempts
-print("Sorry, you failed to guess the number in five attempts.")
-
-# Call the function
-guess_number()
+#         if attempt == max_attempts - 1:
+#             print("Last chance!")
+# print("Sorry, you failed to guess the number in five attempts.")
+# # Call the function
+# guess_number()
